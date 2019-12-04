@@ -14,3 +14,7 @@ tr:nth-child(1) {
 tr:nth-child(2n) {
     background: #61B4CF;
 }
+.hover:hover{
+    background: aquamarine;
+    cursor: pointer;
+}
