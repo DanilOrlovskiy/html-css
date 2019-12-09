@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Test</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<a class="btn" href="#openModal">Click</a>
+<div class="modalDialog" id="openModal">
+    <div>
+        <div class="modalHeader">
+            <h1>Checkout Form</h1>
+        </div>
+        <form class="form1">
+            <div class="d-inline-block">
+                <input class="form1-input" type="text" placeholder="First Name">
+                <input class="form1-input" type="text" placeholder="Last Name">
+            </div>
+            <div class="d-inline-block">
+                <input class="form1-input" type="email" placeholder="Email">
+                <input class="form1-input" type="text" placeholder="Phone">
+            </div>
+        </form>
+        <form class="form2">
+            <div class="d-inline-block">
+                <select class="form-select" id="country">
+                    <option value="ukraine">Ukraine</option>
+                    <option value="usa">USA</option>
+                    <option value="poland">Poland</option>
+                </select>
+            </div>
+            <div class="d-inline-block">
+                <input class="form2-input" type="text" placeholder="City">
+            </div>
+            <div class="d-inline-block">
+                <input class="form2-input2" type="text" placeholder="Post Code">
+            </div>
+            <div>
+                <input class="form2-input3" type="text" placeholder="Address">
+            </div>
+            <div>
+                <textarea class="form2-input4">Additional info</textarea>
+            </div>
+        </form>
+        <form class="form3">
+            <label class="container">Visa
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">MasterCard
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">PayPal
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <div class="d-inline-block input-form3">
+                <input type="text" id="nameOnCard" placeholder="Name on card">
+                <input type="text" id="cardNumber" placeholder="Card number">
+                <input type="text" id="cvv2" placeholder="CVV2">
+            </div>
+            <div class="d-inline-block ">
+                <a style="">Expiration date</a>
+                <select class="form-select" id="month">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <input class="input-formYear" type="text" id="year" placeholder="Year">
+            </div>
+        </form>
+        <div class="modalFooter btn-modalFooter">
+            <button class="" type="submit">Continue</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
