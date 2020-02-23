@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="js/lib.js"></script>
+    <script src="js/DragManager.js"></script>
+    <script src="js/DragAvatar.js"></script>
+    <script src="js/DragZone.js"></script>
+    <script src="js/DropTarget.js"></script>
+    <script src="js/AdditionToDropTarget.js"></script>
+    <script src="js/AdditionToDragAvatar.js"></script>
+    <script src="js/AdditionToDragZone.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+<div class="row">
+    <h2 class="topNav">To Do</h2>
+    <h2 class="topNav">In Progress</h2>
+    <h2 class="topNav">Finished</h2>
+</div>
+
+<div class="row">
+    <ul class="list">
+        <li class="dragble"><span></span></li>
+    </ul>
+    <ul class="list">
+        <li class="dragble"><span></span></li>
+    </ul>
+    <ul class="list">
+        <li class="dragble"><span></span></li>
+    </ul>
+</div>
+<script>
+    const lists = document.querySelectorAll(".list");
+    const tech = [
+        ["Первая задача", "Вторая задача", "Третья задача", "Четвертая задача", "Пятая задача", "Шестая задача"],
+        [" "],
+        [" "],
+    ];
+
+    lists.forEach(function (elem, i) {
+        let html = "";
+
+        for (let k = 0; k < tech[i].length; k++) {
+            html += "<li class='dragble'><span>" + tech[i][k] + "</span></li>";
+        }
+        elem.innerHTML = html;
+    });
+
+    for (var i = 0; i < lists.length; i++) {
+        new MyDragZone(lists[i]);
+        new MyDropTarget(lists[i]);
+    }
+</script>
+
+</body>
+</html>
