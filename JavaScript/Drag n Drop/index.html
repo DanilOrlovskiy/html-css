@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Drag n Drop</title>
     <script src="js/lib.js"></script>
     <script src="js/DragManager.js"></script>
     <script src="js/DragAvatar.js"></script>
@@ -22,6 +23,7 @@
 
 <div class="row">
     <ul class="list">
+        <li><span></span></li>
         <li class="dragble"><span></span></li>
     </ul>
     <ul class="list">
@@ -34,7 +36,7 @@
 <script>
     const lists = document.querySelectorAll(".list");
     const tech = [
-        ["Первая задача", "Вторая задача", "Третья задача", "Четвертая задача", "Пятая задача", "Шестая задача"],
+        [" ", "Первая задача", "Вторая задача", "Третья задача", "Четвертая задача", "Пятая задача", "Шестая задача"],
         [" "],
         [" "],
     ];
@@ -43,12 +45,13 @@
         let html = "";
 
         for (let k = 0; k < tech[i].length; k++) {
+
             html += "<li class='dragble'><span>" + tech[i][k] + "</span></li>";
         }
         elem.innerHTML = html;
     });
 
-    for (var i = 0; i < lists.length; i++) {
+    for (let i = 0; i < lists.length; i++) {
         new MyDragZone(lists[i]);
         new MyDropTarget(lists[i]);
     }

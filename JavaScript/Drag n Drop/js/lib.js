@@ -1,43 +1,45 @@
 function getCoords(elem) {
-  var box = elem.getBoundingClientRect();
+    let box = elem.getBoundingClientRect();
 
-  var body = document.body;
-  var docElem = document.documentElement;
+    let body = document.body;
+    let docElem = document.documentElement;
 
-  var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
-  var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
+    let scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
+    let scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
 
-  var clientTop = docElem.clientTop || body.clientTop || 0;
-  var clientLeft = docElem.clientLeft || body.clientLeft || 0;
+    let clientTop = docElem.clientTop || body.clientTop || 0;
+    let clientLeft = docElem.clientLeft || body.clientLeft || 0;
 
-  var top = box.top + scrollTop - clientTop;
-  var left = box.left + scrollLeft - clientLeft;
+    let top = box.top + scrollTop - clientTop;
+    let left = box.left + scrollLeft - clientLeft;
 
-  return {
-    top: Math.round(top),
-    left: Math.round(left)
-  };
+    return {
+        top: Math.round(top),
+        left: Math.round(left)
+    };
 }
 
 function getElementUnderClientXY(elem, clientX, clientY) {
-  var display = elem.style.display || '';
-  elem.style.display = 'none';
+    let display = elem.style.display || '';
+    elem.style.display = 'none';
 
-  var target = document.elementFromPoint(clientX, clientY);
+    let target = document.elementFromPoint(clientX, clientY);
 
-  elem.style.display = display;
+    elem.style.display = display;
 
-  if (!target || target == document) {
-    target = document.body;
-  }
+    if (!target || target == document) {
+        target = document.body;
+    }
 
-  return target;
+    return target;
 }
 
 function extend(Child, Parent) {
-  function F() {}
-  F.prototype = Parent.prototype
-  Child.prototype = new F()
-  Child.prototype.constructor = Child
-  Child.parent = Parent.prototype
+    function F() {
+    }
+
+    F.prototype = Parent.prototype;
+    Child.prototype = new F();
+    Child.prototype.constructor = Child;
+    Child.parent = Parent.prototype;
 }
