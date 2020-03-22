@@ -1,3 +1,5 @@
+'use strict';
+
 function getCoords(elem) {
     let box = elem.getBoundingClientRect();
 

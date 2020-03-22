@@ -1,3 +1,5 @@
+'use strict';
+
 function DragZone(elem) {
     elem.dragZone = this;
     this._elem = elem;
@@ -17,3 +19,4 @@ DragZone.prototype.onDragStart = function (downX, downY, event) {
 
     return avatar;
 };
+

@@ -24,6 +24,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -54,7 +55,9 @@
       <updated>1582489524447</updated>
       <workItem from="1582489525560" duration="7069000" />
       <workItem from="1582496651972" duration="1587000" />
-      <workItem from="1582575496980" duration="1294000" />
+      <workItem from="1582575496980" duration="2519000" />
+      <workItem from="1582795621094" duration="818000" />
+      <workItem from="1582797046927" duration="2317000" />
     </task>
     <servers />
   </component>
@@ -66,7 +69,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

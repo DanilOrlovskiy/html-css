@@ -1,3 +1,5 @@
+'use strict';
+
 function MyDragZone(elem) {
     DragZone.apply(this, arguments);
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 function MyDropTarget(elem) {
     MyDropTarget.parent.constructor.apply(this, arguments);
 }
@@ -18,9 +20,9 @@ MyDropTarget.prototype._getTargetElem = function (avatar, event) {
     while (target !== this._elem) {
         if (target.classList.contains("dragble")) {
             let centerTargetEdge = target.getBoundingClientRect().top + target.offsetHeight / 2;
-            let ceterAtavarEdge = avatar._elem.getBoundingClientRect().top + avatar._elem.offsetHeight / 2
+            let centerAtavarEdge = avatar._elem.getBoundingClientRect().top + avatar._elem.offsetHeight / 2
 
-            if (centerTargetEdge > ceterAtavarEdge) {
+            if (centerTargetEdge > centerAtavarEdge) {
                 console.log("top");
                 return target;
             } else {

@@ -1,3 +1,5 @@
+'use strict';
+
 function MyDragAvatar(dragZone, dragElem) {
     DragAvatar.apply(this, arguments);
 }

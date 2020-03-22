@@ -1,3 +1,5 @@
+'use strict';
+
 let dragManager = new function() {
 
   let dragZone, avatar, dropTarget;

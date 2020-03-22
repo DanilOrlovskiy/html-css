@@ -1,3 +1,5 @@
+'use strict';
+
 function DropTarget(elem) {
     elem.dropTarget = this;
     this._elem = elem;
